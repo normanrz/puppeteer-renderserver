@@ -36,9 +36,12 @@ async function renderPDF(res, obj) {
 
     if (obj.url) {
       await page.goto(obj.url, { waitUntil: 'networkidle' });
-    } else {
+    } else if (obj.html) {
       await page.setContent(obj.html);
       await page.waitForNavigation({ waitUntil: 'networkidle' });
+    } else {
+      res.sendStatus(400);
+      return
     }
 
     await page.pdf({
