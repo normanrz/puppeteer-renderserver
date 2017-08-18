@@ -1,0 +1,15 @@
+{
+  "name": "puppeteer-renderserver",
+  "version": "1.0.0",
+  "description": "Simple html2pdf render server for Heroku",
+  "main": "index.js",
+  "repository": "git@github.com:normanrz/puppeteer-renderserver.git",
+  "author": "Norman Rzepka <code@normanrz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "puppeteer": "^0.9.0"
+  }
+}
